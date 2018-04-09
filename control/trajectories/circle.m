@@ -3,7 +3,7 @@ function [desired_state] = circle(t, qn)
 
 % =================== Your code goes here ===================
 % You have to set the pos, vel, acc, yaw and yawdot variables
-time_tol = 12;
+time_tol = 12; % time_total
 radius = 5;
 dt = 0.0001;
 

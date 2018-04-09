@@ -32,9 +32,17 @@ params.invI = inv(I);
 params.grav = g;
 params.arm_length = L;
 
-params.maxangle = 40*pi/180; % you can specify the maximum commanded angle here
+params.maxangle = 90*pi/180; % you can specify the maximum commanded angle here
 params.maxF     = 2.5*m*g;   % left these untouched from the nano plus
 params.minF     = 0.05*m*g;  % left these untouched from the nano plus
+
+params.kF = 6.11 * 1e-8; % Fi = kF * wi^2
+params.kM = 1.5 * 1e-9;  % Mi = kM * wi^2
+params.km = 20;          % wi_dot = km * (wi_des - wi)
+
+params.ex = -1;
+params.ey = 1;
+
 
 % You can add any fields you want in params
 % for example you can add your controller gains by

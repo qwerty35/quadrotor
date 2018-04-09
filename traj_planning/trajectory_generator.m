@@ -26,7 +26,7 @@ if numel(t) == 0 | numel(qn) == 0
    path{1} = simplify_path2(map, path{1});
    path0 = path;
    [ts, total_time] = generate_ts(path0{1});
-%    X = traj_opt(path0{1}, total_time,ts);
+%  X = traj_opt(path0{1}, total_time,ts);
    X = traj_opt7(path0{1}, total_time,ts);
    return
 end

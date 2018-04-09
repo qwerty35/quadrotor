@@ -24,17 +24,30 @@ g = 9.81;   % gravitational constant
 I = [1.43e-5,   0,          0; % inertial tensor in m^2 kg
      0,         1.43e-5,    0;
      0,         0,          2.89e-5];
-L = 0.046; % arm length in m
+L_arm = 0.046; % arm length in m
+L_leg = 0.017; % leg length in m
+L_propeller = 0.022; % propeller length in m
+H_propeller = 0.010; % propeller height in m
 
 params.mass = m;
 params.I    = I;
 params.invI = inv(I);
 params.grav = g;
-params.arm_length = L;
+params.arm_length = L_arm;
+params.propeller = [L_leg; L_propeller; H_propeller];
 
 params.maxangle = 40*pi/180; % you can specify the maximum commanded angle here
 params.maxF     = 2.5*m*g;   % left these untouched from the nano plus
 params.minF     = 0.05*m*g;  % left these untouched from the nano plus
+params.k_F      = 6.11*1e-8; 
+params.k_M      = 1.5*1e-9; 
+params.k_m      = 20; 
+
+
+params.R_cage = 0.1; % cage radius
+params.ex = -1;
+params.ey = 1;
+
 
 % You can add any fields you want in params
 % for example you can add your controller gains by

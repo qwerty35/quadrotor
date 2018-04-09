@@ -6,14 +6,14 @@ function sdot = quadEOM(t, s, qn, controlhandle, trajhandle, params)
 %
 % INPUTS:
 % t             - 1 x 1, time
-% s             - 13 x 1, state vector = [x, y, z, xd, yd, zd, qw, qx, qy, qz, p, q, r]
+% s             - 17 x 1, state vector = [x, y, z, xd, yd, zd, qw, qx, qy, qz, p, q, r, w1, w2, w3, w4]
 % qn            - quad number (used for multi-robot simulations)
 % controlhandle - function handle of your controller
 % trajhandle    - function handle of your trajectory generator
 % params        - struct, output from crazyflie() and whatever parameters you want to pass in
 %
 % OUTPUTS:
-% sdot          - 13 x 1, derivative of state vector s
+% sdot          - 17 x 1, derivative of state vector s
 %
 % NOTE: You should not modify this function
 % See Also: quadEOM_readonly, crazyflie

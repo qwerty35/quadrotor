@@ -16,7 +16,7 @@ for qn = 1:nquad
     toc
 end
 if nquad == 1
-    plot_path(map, path{1});
+    %plot_path(map, path{1});
 else
     % you could modify your plot_path to handle cell input for multiple robots
 end

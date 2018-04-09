@@ -1,7 +1,7 @@
 function [ s ] = init_state( start, yaw )
-%INIT_STATE Initialize 13 x 1 state vector
+%INIT_STATE Initialize 17 x 1 state vector
 
-s     = zeros(13,1);
+s     = zeros(17,1);
 phi0   = 0.0;
 theta0 = 0.0;
 psi0   = yaw;
@@ -20,5 +20,9 @@ s(10) = Quat0(4); %qz
 s(11) = 0;        %p
 s(12) = 0;        %q
 s(13) = 0;        %r
+s(14) = 0;        %w1
+s(15) = 0;        %w2
+s(16) = 0;        %w3
+s(17) = 0;        %w4
 
 end

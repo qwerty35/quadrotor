@@ -13,4 +13,6 @@ Rot = QuatToRot(x(7:10)');
 qd.euler = [phi; theta; yaw];
 qd.omega = x(11:13);
 
+qd.w = x(14:17);
+
 end
