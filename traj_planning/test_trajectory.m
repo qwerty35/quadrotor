@@ -9,7 +9,13 @@ function [xtraj, ttraj, terminate_cond] = test_trajectory(start, stop, map, path
 
 %Controller and trajectory generator handles
 controlhandle = @controller;
-trajhandle    = @trajectory_generator;
+% trajhandle    = @trajectory_generator;
+trajhandle    = @trajectory_box_generator;
+% trajhandle    = @trajectory_box_cont_generator;
+
+% Generate trajectory
+disp('Generating Initial Trajectory ...');
+trajhandle([], [], map, path);
 
 % Make cell
 if ~iscell(start), start = {start}; end
@@ -35,16 +41,6 @@ if nargin < 5
 end
 
 fprintf('Initializing figures...\n')
-if vis
-    h_fig = figure('Name', 'Environment');
-else
-    h_fig = figure('Name', 'Environment', 'Visible', 'Off');
-end
-if nquad == 1
-    plot_path(map, path{1});
-else
-    % you could modify your plot_path to handle cell input for multiple robots
-end
 h_3d = gca;
 drawnow;
 xlabel('x [m]'); ylabel('y [m]'); zlabel('z [m]')
@@ -76,7 +72,7 @@ vel_tol  = 0.05; % m/s
 x = x0;        % state
 
 %% ************************* RUN SIMULATION *************************
-OUTPUT_TO_VIDEO = 1;
+OUTPUT_TO_VIDEO = 0;
 if OUTPUT_TO_VIDEO == 1
     v = VideoWriter('map1.avi');
     open(v)
@@ -92,12 +88,12 @@ for iter = 1:max_iter
         if iter == 1
             QP{qn} = QuadPlot(qn, x0{qn}, 0.1, 0.04, quadcolors(qn,:), max_iter, h_3d);
             desired_state = trajhandle(time, qn);
-            QP{qn}.UpdateQuadPlot(x{qn}, [desired_state.pos; desired_state.vel], time);
+            QP{qn}.UpdateQuadPlot(x{qn}, [desired_state.pos; desired_state.vel; desired_state.acc; desired_state.jerk], time);
             h_title = title(sprintf('iteration: %d, time: %4.2f', iter, time));
         end
 
         % Run simulation
-        [tsave, xsave] = ode45(@(t,s) quadEOM(t, s, qn, controlhandle, trajhandle, params), timeint, x{qn});
+        [tsave, xsave] = ode45(@(t,s) quadEOM(t, s, qn, controlhandle, trajhandle, params, map), timeint, x{qn});
         x{qn} = xsave(end, :)';
         % Save to traj
         xtraj{qn}((iter-1)*nstep+1:iter*nstep,:) = xsave(1:end-1,:);
@@ -105,7 +101,7 @@ for iter = 1:max_iter
 
         % Update quad plot
         desired_state = trajhandle(time + cstep, qn);
-        QP{qn}.UpdateQuadPlot(x{qn}, [desired_state.pos; desired_state.vel], time + cstep);
+        QP{qn}.UpdateQuadPlot(x{qn}, [desired_state.pos; desired_state.vel; desired_state.acc; desired_state.jerk], time + cstep);
         if OUTPUT_TO_VIDEO == 1
             im = frame2im(getframe(gcf));
             writeVideo(v,im);
@@ -122,7 +118,7 @@ for iter = 1:max_iter
     end
 
     % Check termination criteria
-    terminate_cond = terminate_check(x, time, stop, pos_tol, vel_tol, time_tol);
+    terminate_cond = terminate_check(x, map, time, stop, pos_tol, vel_tol, time_tol);
     if terminate_cond
         break
     end
@@ -149,14 +145,29 @@ if vis
         % Truncate saved variables
         QP{qn}.TruncateHist();
         % Plot position for each quad
-        h_pos{qn} = figure('Name', ['Quad ' num2str(qn) ' : position']);
+        % h_pos{qn} = figure('Name', ['Quad ' num2str(qn) ' : position']);
+        h_pos{qn} = figure(3);
         plot_state(h_pos{qn}, QP{qn}.state_hist(1:3,:), QP{qn}.time_hist, 'pos', 'vic');
         plot_state(h_pos{qn}, QP{qn}.state_des_hist(1:3,:), QP{qn}.time_hist, 'pos', 'des');
         % Plot velocity for each quad
-        h_vel{qn} = figure('Name', ['Quad ' num2str(qn) ' : velocity']);
+        % h_vel{qn} = figure('Name', ['Quad ' num2str(qn) ' : velocity']);
+        h_vel{qn} = figure(4);
         plot_state(h_vel{qn}, QP{qn}.state_hist(4:6,:), QP{qn}.time_hist, 'vel', 'vic');
         plot_state(h_vel{qn}, QP{qn}.state_des_hist(4:6,:), QP{qn}.time_hist, 'vel', 'des');
+        % Plot acc for each quad
+        % h_acc{qn} = figure('Name', ['Quad ' num2str(qn) ' : accelation']);
+        h_acc{qn} = figure(5);
+        plot_state(h_acc{qn}, QP{qn}.state_des_hist(7:9,:), QP{qn}.time_hist, 'acc', 'des');
+        % Plot jerk for each quad
+        % h_jerk{qn} = figure('Name', ['Quad ' num2str(qn) ' : jerk']);
+        h_jerk{qn} = figure(6);
+        plot_state(h_jerk{qn}, QP{qn}.state_des_hist(10:12,:), QP{qn}.time_hist, 'jerk', 'des');
+        % Plot motor thrust for each quad
+        % h_thrust{qn} = figure('Name', ['Quad ' num2str(qn) ' : thrust']);
+        h_thrust{qn} = figure(7);
+        plot_state(h_thrust{qn}, params.k_F*QP{qn}.state_hist(7:10,:).^2, QP{qn}.time_hist, 'thrust', 'vic');
     end
+    save result;
 end
 
 end

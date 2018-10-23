@@ -12,12 +12,12 @@ addpath('trajectories')
 % You can change trajectory here
 
 % trajectory generator
-%trajhandle = @step;
-trajhandle = @circle;
+trajhandle = @step;
+%trajhandle = @circle;
 %trajhandle = @diamond;
 
 % controller
-controlhandle = @controller;
+controlhandle = @Lee_controller;
 
 % real-time 
 real_time = true;
@@ -86,7 +86,7 @@ for iter = 1:max_iter
     for qn = 1:nquad
         % Initialize quad plot
         if iter == 1
-            QP{qn} = QuadPlot(qn, x0{qn}, params.arm_length, params.propeller, 0.02, quadcolors(qn,:), max_iter, h_3d);
+            QP{qn} = QuadPlot(qn, x0{qn}, params.arm_length, 0.02, quadcolors(qn,:), max_iter, h_3d);
             desired_state = trajhandle(time, qn);
             QP{qn}.UpdateQuadPlot(x{qn}, [desired_state.pos; desired_state.vel], time);
             h_title = title(sprintf('iteration: %d, time: %4.2f', iter, time));

@@ -1,4 +1,4 @@
-function collide = collision_check(p, margin)
+function collide = collision_inter_check(p, map, margin)
 collide = 0;
 if(size(p,1) <= 1)
     return;

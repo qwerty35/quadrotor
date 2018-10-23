@@ -43,6 +43,11 @@ A = [0.25,                      0, -0.5/params.arm_length,  0.25*params.k_F/para
 
 prop_thrusts = A*[F;M];
 prop_thrusts_clamped = max(min(prop_thrusts, params.maxF/4), params.minF/4);
+if(prop_thrusts_clamped == params.minF/4)
+    disp('min');
+elseif(prop_thrusts_clamped == params.maxF/4)
+    disp('max');
+end
 prop_w = sqrt(prop_thrusts_clamped./params.k_F);
 curr_w = [w1; w2; w3; w4];
 curr_thrusts = params.k_F*(curr_w.^2);

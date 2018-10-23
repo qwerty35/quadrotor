@@ -1,0 +1,6 @@
+function isInner = is_inner_point(segment_point,box,margin)
+    isInner = box(1)-margin < segment_point(1) && segment_point(1) < box(4)+margin && ... 
+                box(2)-margin < segment_point(2) && segment_point(2) < box(5)+margin && ...
+                box(3)-margin < segment_point(3) && segment_point(3) < box(6)+margin; 
+end
+

@@ -20,15 +20,39 @@ function [ desired_state ] = trajectory_generator(t, qn, map, path)
 % persistent map0 path0
 % map0 = map;
 % path0 = path;
-persistent map0 path0 total_time X ts;
+persistent map0 path0 total_time X ts Npoly;
 if numel(t) == 0 | numel(qn) == 0
-   map0 = map;
-   path{1} = simplify_path2(map, path{1});
-   path0 = path;
-   [ts, total_time] = generate_ts(path0{1});
-%  X = traj_opt(path0{1}, total_time,ts);
-   X = traj_opt7(path0{1}, total_time,ts);
-   return
+    map0 = map;
+      
+    % waypoint path 
+    path{1} = simplify_path2(map, path{1});
+    path0 = path;
+    [ts, total_time] = generate_ts(path0{1}); % speed 2로 간다고 가정하고 time segment를 나눔
+    
+    % Select trajectory optimizer
+%   tic
+%   [X,Npoly] = traj_opt_Richter(path0{1},total_time,ts);
+%   toc
+  tic
+  [X,Npoly,total_cost] = traj_opt_Richter_const(path0{1},map,ts);
+  toc
+%     tic
+%     [X,Npoly,total_cost] = traj_opt_Park(path0{1},map,ts);
+%     toc
+%     total_cost
+    
+    % time segment optimizer
+%     tic
+%     [X,Npoly,ts] = optimize_ts_grad(path0{1},map,ts,@traj_opt_Richter);
+%     toc
+%     tic
+%     [X,Npoly,ts] = optimize_ts_fmincon(path0{1},map,ts,@traj_opt_Richter);
+%     toc
+    
+    % plot box, segment points
+    segments = [X(Npoly+1:Npoly+1:end,:); path0{1}(end,:)];
+    plot_path(map,path,segments);
+    return
 end
 
 if nargin < 4
@@ -41,21 +65,16 @@ if t >= total_time
     pos = p(end,:);
     vel = [0;0;0];
     acc = [0;0;0];
+    jerk = [0;0;0]; 
 else
-%     
-%     3rd order trajectory planning
-%     k = find(ts<=t);
-%     k = k(end);
-%     pos = [t^3, t^2, t, 1]*X(4*(k-1)+1:4*k,:);
-%     vel = [3*t^2, 2*t, 1, 0]*X(4*(k-1)+1:4*k,:);
-%     acc = [6*t, 2, 0, 0]*X(4*(k-1)+1:4*k,:);
-
-%     % 7th order minimum snap trajectory
-    k = find(ts<=t);
-    k = k(end);
-    pos = [t^7, t^6, t^5, t^4, t^3, t^2, t, 1]*X(8*(k-1)+1:8*k,:);
-    vel = [7*t^6, 6*t^5, 5*t^4, 4*t^3, 3*t^2, 2*t, 1, 0]*X(8*(k-1)+1:8*k,:);
-    acc = [42*t^5, 30*t^4, 20*t^3, 12*t^2, 6*t, 2, 0, 0]*X(8*(k-1)+1:8*k,:);
+     % Npolyth order trahectory planning for Richter optimizer
+     m = find(ts<=t);
+     m = m(end);
+     
+     pos = timevector(t-ts(m),Npoly,0)*X((Npoly+1)*(m-1)+1:(Npoly+1)*m,:);
+     vel = timevector(t-ts(m),Npoly,1)*X((Npoly+1)*(m-1)+1:(Npoly+1)*m,:);
+     acc = timevector(t-ts(m),Npoly,2)*X((Npoly+1)*(m-1)+1:(Npoly+1)*m,:);
+     jerk = timevector(t-ts(m),Npoly,3)*X((Npoly+1)*(m-1)+1:(Npoly+1)*m,:);
 end
 
 yaw = 0;
@@ -66,5 +85,6 @@ yawdot = 0;
 desired_state.pos = pos(:);
 desired_state.vel = vel(:);
 desired_state.acc = acc(:);
+desired_state.jerk = jerk(:);
 desired_state.yaw = yaw;
 desired_state.yawdot = yawdot;
