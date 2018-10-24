@@ -1,4 +1,4 @@
-function [ desired_state ] = trajectory_swarm_generator(t, qn, map, path, makespan, params)
+function [ desired_state ] = trajectory_swarm_generator(t, qi, map, path, makespan, params)
 % TRAJECTORY_SWARM_GENERATOR: Turn an ECBS path into a box trajectory
 % 
 % map : struct, The map structure returned by your load_map function
@@ -14,7 +14,7 @@ function [ desired_state ] = trajectory_swarm_generator(t, qn, map, path, makesp
 % path0 = path;
 
 persistent map0 path0 Coef0 total_time0 ts0 Npoly;
-if numel(t) == 0 | numel(qn) == 0
+if numel(t) == 0 | numel(qi) == 0
     speed = 2.2;
     grid_size = 1;
     time_step = grid_size/speed; 
@@ -26,22 +26,22 @@ if numel(t) == 0 | numel(qn) == 0
     [map.box_cell, ts_cell, ts0, rel] = generate_swarm_box(map0,path0,makespan,time_step,0);
 
     tic
-    [Coef0,Npoly,total_cost] = traj_opt_Park_swarm(path0,map.box_cell,ts_cell, ts0, rel); 
+    [Coef0,Npoly,total_cost] = traj_opt_Park_swarm(path0,map.box_cell,ts_cell, ts0, rel, 0.6); 
     toc
     
     disp(total_cost);
     
     % plot box, segment points 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%각 agent들의 path 다 보이게 할것
-    segments = [Coef0{qi}(Npoly+1:Npoly+1:end,:); path0{qi}(end,:)];
+    segments = [Coef0{1}(Npoly+1:Npoly+1:end,:); path0{1}(end,:)];
     plot_path(map,path0,segments);
     return
 end
 
-p = path0{qn};
-X = Coef0{qn};
-ts = ts0{qn};
-total_time = total_time0{qn};
+p = path0{qi};
+X = Coef0{qi};
+ts = ts0;
+total_time = total_time0;
 
 if t >= total_time
     pos = p(end,:);

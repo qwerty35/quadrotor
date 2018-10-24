@@ -22,7 +22,7 @@ function [box_cell, ts_cell, ts_total, rel] = generate_swarm_box(map, path, make
 % box       : safe flight corridor, [x0,y0,z0,x1,y1,z1,colorR,G,B ]  
 % box_array : [x0,y0,z0,x1,y1,z1]
 % box_cell  : cell{ matrix : boxpath x box }
-% rel_info  : [qi, qj, sector_prev, sector_next, t_trans]
+% rel_info  : [qi, qj, sector, t_trans]
 % sector    : +1:+x, -1:-x, +2:+y, -2:-y, +3:+z, -3:-z
 
 qn = size(path,1);
@@ -138,6 +138,7 @@ for qi = 1:qn
         % find minimum jump sector path (heuristic greedy search)
         iter = path_max;
         [c_next,s_next] = max(sector_log(:,iter));
+        rel = [[qi qj sector_range(s_next) makespan*time_step]; rel];
         iter = iter - c_next;
         
         while iter > 1
@@ -152,13 +153,14 @@ for qi = 1:qn
                 count = count + 1;
             end
             
-            rel = [[qi qj sector_range(s_curr) sector_range(s_next) floor(iter+count/2)*time_step]; rel];
+            rel = [[qi qj sector_range(s_curr) floor(iter+count/2)*time_step]; rel];
             ts_total = [ts_total floor(iter+count/2)];
             
             s_next = s_curr;
             c_next = c_curr;
             iter = iter - c_next;
         end
+        
     end
 end
 
