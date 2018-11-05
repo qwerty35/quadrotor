@@ -29,8 +29,8 @@ if numel(t) == 0 | numel(qi) == 0
     toc
     
     [Coef0,Npoly,total_cost] = traj_opt_Park_swarm(path0,map.box_cell,ts_cell, ts0, rel, 0.3); 
-
     
+    disp('Total_cost is ...');
     disp(total_cost);
     
     % plot box, segment points 

@@ -3,6 +3,7 @@ clear all;
 clc;
 
 addpath(genpath('./'));
+addpath('/opt/ibm/ILOG/CPLEX_Studio128/cplex/matlab/x86-64_linux')
 
 % Plan path 
 disp('Planning ...');

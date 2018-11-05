@@ -258,7 +258,7 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
     dlq = [dlq_box; dlq_rel];
     
     
-    save const_matrix
+%     save const_matrix
     
     toc
     %% Solve QP and get c
@@ -269,9 +269,13 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
     total_cost = 0;
     
     for k = 1 : outdim
+%       % quadprog
 %         options = optimoptions('quadprog','MaxIterations',200,'Display','none');
-        options = optimoptions('quadprog','MaxIterations',200);
-        [c(:,k), cost, exitflag] = quadprog(Q,[],Alq,dlq(:,k),Aeq,deq(:,k),[],[],[],options);
+%         options = optimoptions('quadprog','MaxIterations',200);
+%         [c(:,k), cost, exitflag] = quadprog(Q,[],Alq,dlq(:,k),Aeq,deq(:,k),[],[],[],options);
+        % cplex
+        [c(:,k), cost, exitflag] = cplexqp(Q,zeros(1,qn*M*(N+1)),Alq,dlq(:,k),Aeq,deq(:,k));
+        
         if cost < -1e-4
             error('cost < 0');
         end
@@ -296,7 +300,6 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
                 end
             end
         end
-        
     end
     
    
