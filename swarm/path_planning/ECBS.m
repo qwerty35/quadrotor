@@ -1,8 +1,5 @@
 function [path,makespan] = ECBS(map,start,stop)
-    %%%%%%나중에 연동시키는걸로 바꿔서 할것
-    z = 3;
-    
-    fileID = fopen('maps/output.yaml');
+    fileID = fopen('maps/output_8agents.yaml');
     textscan(fileID,'%s',2,'Delimiter','\n');
     line = textscan(fileID,'%s %f',1);
     makespan = line{2};
@@ -21,8 +18,8 @@ function [path,makespan] = ECBS(map,start,stop)
             continue;
         end
         
-        path{qi} = [path{qi}; [str2double(parser{iter+2}) str2double(parser{iter+4}) z]];
-        iter = iter+7;
+        path{qi} = [path{qi}; [str2double(parser{iter+2}) str2double(parser{iter+4}) str2double(parser{iter+6})]];
+        iter = iter+9;
     end
     
     for qi = 1:size(path,1)

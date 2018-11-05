@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0c89396-bc1e-4f03-b288-6dc63e372a54" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/Faessler_controller.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/Faessler_controller.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/Lee_controller.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/Lee_controller.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/controller.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/controller.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/crazyflie.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/crazyflie.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/quadEOM.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/quadEOM.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/quadEOM_readonly.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/quadEOM_readonly.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/runsim.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/runsim.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/trajectories/circle.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/trajectories/circle.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/trajectories/diamond.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/trajectories/diamond.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/trajectories/step.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/trajectories/step.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/trajectories/tj_from_line.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/trajectories/tj_from_line.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/QuadPlot.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/QuadPlot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/QuatToRot.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/QuatToRot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RPYtoRot_ZXY.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RPYtoRot_ZXY.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RPYtoRot_ZXY2.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RPYtoRot_ZXY2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RotToQuat.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RotToQuat.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RotToRPY_ZXY.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RotToRPY_ZXY.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RotToRPY_ZXY2.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RotToRPY_ZXY2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RotX.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RotX.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RotY.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RotY.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/RotZ.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/RotZ.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/Rx.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/Rx.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/Ry.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/Ry.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/Rz.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/Rz.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/collision_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/collision_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/cross2.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/cross2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/hat.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/hat.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/hat_map.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/hat_map.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/init_state.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/init_state.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/inv_hat.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/inv_hat.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/plot_state.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/plot_state.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/qdToState.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/qdToState.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/quad_pos.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/quad_pos.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/stateToQd.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/stateToQd.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/terminate_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/terminate_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/trans_map.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/trans_map.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/vec_cross.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/vec_cross.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/vec_dot.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/vec_dot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../control/utils/vee_map.m" beforeDir="false" afterPath="$PROJECT_DIR$/../control/utils/vee_map.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller.m" beforeDir="false" afterPath="$PROJECT_DIR$/controller.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crazyflie.m" beforeDir="false" afterPath="$PROJECT_DIR$/crazyflie.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_box.m" beforeDir="false" afterPath="$PROJECT_DIR$/generate_box.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_swarm_box.m" beforeDir="false" afterPath="$PROJECT_DIR$/generate_swarm_box.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_ts.m" beforeDir="false" afterPath="$PROJECT_DIR$/generate_ts.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init_script.m" beforeDir="false" afterPath="$PROJECT_DIR$/init_script.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linearDiscretize.m" beforeDir="false" afterPath="$PROJECT_DIR$/linearDiscretize.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map_corridor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map_corridor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map_empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map_empty.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map_one_block.txt" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map_one_block.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/output.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimize_ts_fmincon.asv" beforeDir="false" afterPath="$PROJECT_DIR$/optimize_ts_fmincon.asv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimize_ts_fmincon.m" beforeDir="false" afterPath="$PROJECT_DIR$/optimize_ts_fmincon.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimize_ts_grad.m" beforeDir="false" afterPath="$PROJECT_DIR$/optimize_ts_grad.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/ECBS.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/ECBS.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/collide.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/collide.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/dijkstra.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/dijkstra.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/fmm.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/fmm.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/idx_to_points.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/idx_to_points.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/load_map.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/load_map.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/plot_path.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/plot_path.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/plot_path1.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/plot_path1.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/plot_path3.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/plot_path3.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/points_to_idx.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/points_to_idx.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/velocity_field.m" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/velocity_field.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quadEOM.m" beforeDir="false" afterPath="$PROJECT_DIR$/quadEOM.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quadEOM_CO.m" beforeDir="false" afterPath="$PROJECT_DIR$/quadEOM_CO.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quadEOM_CO_readonly.m" beforeDir="false" afterPath="$PROJECT_DIR$/quadEOM_CO_readonly.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quadEOM_readonly.m" beforeDir="false" afterPath="$PROJECT_DIR$/quadEOM_readonly.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runsim.m" beforeDir="false" afterPath="$PROJECT_DIR$/runsim.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplify_path.m" beforeDir="false" afterPath="$PROJECT_DIR$/simplify_path.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplify_path2.m" beforeDir="false" afterPath="$PROJECT_DIR$/simplify_path2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_trajectory.m" beforeDir="false" afterPath="$PROJECT_DIR$/test_trajectory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_Gao.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_Gao.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_Park.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_Park.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_Park.ps" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_Park.ps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_Park_swarm.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_Park_swarm.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_Richter.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_Richter.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_Richter.ps" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_Richter.ps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_Richter_const.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_Richter_const.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_cost.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_cost.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_nonlinear.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_nonlinear.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traj_opt_wrapper.m" beforeDir="false" afterPath="$PROJECT_DIR$/traj_opt_wrapper.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_generator.m" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_generator.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trajectory_swarm_generator.m" beforeDir="false" afterPath="$PROJECT_DIR$/trajectory_swarm_generator.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/QuadPlot.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/QuadPlot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/QuatToRot.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/QuatToRot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/RPYtoRot_ZXY.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/RPYtoRot_ZXY.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/RotToQuat.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/RotToQuat.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/RotToRPY_ZXY.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/RotToRPY_ZXY.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/boundary_point.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/boundary_point.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/boundary_point2.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/boundary_point2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/box_cell2array.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/box_cell2array.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/collision_block_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/collision_block_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/collision_box_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/collision_box_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/collision_inter_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/collision_inter_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/create_sphere.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/create_sphere.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/generate_map.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/generate_map.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/init_state.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/init_state.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/is_inner_point.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/is_inner_point.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/plot_state.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plot_state.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/qdToState.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/qdToState.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/quad_pos.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/quad_pos.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/stateToQd.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/stateToQd.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/terminate_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/terminate_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/timevector.m" beforeDir="false" afterPath="$PROJECT_DIR$/utils/timevector.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/QpAp.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/QpAp.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/controller.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/controller.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/crazyflie.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/crazyflie.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/generate_box.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/generate_box.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/generate_ts.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/generate_ts.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/getK.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/getK.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/getW.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/getW.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/getWinv.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/getWinv.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/init_script.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/init_script.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/invPolyMat.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/invPolyMat.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map_corridor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map_corridor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map_empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map_empty.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/maps/map_one_block.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/maps/map_one_block.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/onedimTraj.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/onedimTraj.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/optimize_ts_fmincon.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/optimize_ts_fmincon.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/optimize_ts_grad.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/optimize_ts_grad.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/optimize_ts_heu.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/optimize_ts_heu.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/collide.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/collide.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/dijkstra.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/dijkstra.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/fmm.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/fmm.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/idx_to_points.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/idx_to_points.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/load_map.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/load_map.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/plot_path.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/plot_path.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/plot_path1.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/plot_path1.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/plot_path3.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/plot_path3.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/points_to_idx.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/points_to_idx.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/path_planning/velocity_field.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/path_planning/velocity_field.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/quadEOM.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/quadEOM.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/quadEOM_Obstacle.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/quadEOM_Obstacle.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/quadEOM_readonly.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/quadEOM_readonly.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/runsim.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/runsim.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/simplify_path.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/simplify_path.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/simplify_path2.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/simplify_path2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/test_cont_script.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/test_cont_script.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/test_inverse.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/test_inverse.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/test_trajectory.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/test_trajectory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_Chen.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_Chen.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_Gao.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_Gao.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_Park.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_Park.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_Richter.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_Richter.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_Richter_const.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_Richter_const.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_cost.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_cost.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_nonlinear.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_nonlinear.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/traj_opt_wrapper.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/traj_opt_wrapper.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/trajectory_box_cont_generator.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/trajectory_box_cont_generator.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/trajectory_box_generator.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/trajectory_box_generator.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/trajectory_generator.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/trajectory_generator.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/QuadPlot.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/QuadPlot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/QuatToRot.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/QuatToRot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/RPYtoRot_ZXY.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/RPYtoRot_ZXY.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/RotToQuat.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/RotToQuat.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/RotToRPY_ZXY.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/RotToRPY_ZXY.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/Untitled.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/Untitled.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/boundary_point.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/boundary_point.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/boundary_point2.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/boundary_point2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/box_cell2array.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/box_cell2array.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/collision_block_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/collision_block_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/collision_box_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/collision_box_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/collision_inter_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/collision_inter_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/create_sphere.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/create_sphere.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/generate_map.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/generate_map.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/init_state.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/init_state.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/is_inner_point.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/is_inner_point.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/plot_state.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/plot_state.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/polytopes/addBounds.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/polytopes/addBounds.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/polytopes/intersectionHull.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/polytopes/intersectionHull.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/polytopes/lcon2vert.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/polytopes/lcon2vert.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/polytopes/qlcon2vert.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/polytopes/qlcon2vert.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/polytopes/separateBounds.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/polytopes/separateBounds.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/polytopes/unionHull.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/polytopes/unionHull.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/polytopes/vert2lcon.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/polytopes/vert2lcon.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/qdToState.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/qdToState.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/quad_pos.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/quad_pos.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/stateToQd.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/stateToQd.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/terminate_check.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/terminate_check.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../traj_planning/utils/timevector.m" beforeDir="false" afterPath="$PROJECT_DIR$/../traj_planning/utils/timevector.m" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="697173600">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="m" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Matlab" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/runsim.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traj_opt_Park_swarm.m">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2026" />
+    <option name="y" value="371" />
+    <option name="width" value="1851" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="swarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="swarm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="MATLAB_INTERPRETER" value="matlab" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.protractor.protractor_package" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="MatlabApplication" factoryName="Matlab">
+      <option name="FILE_PATH" value="$PROJECT_DIR$/runsim.m" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="PARAMETERS" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runsim.m" type="MatlabApplication" factoryName="Matlab" temporary="true">
+      <option name="FILE_PATH" value="$PROJECT_DIR$/runsim.m" />
+      <option name="INTERPRETER_PATH" value="matlab" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="PARAMETERS" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Matlab.runsim.m" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0c89396-bc1e-4f03-b288-6dc63e372a54" name="Default Changelist" comment="" />
+      <created>1540877139581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540877139581</updated>
+      <workItem from="1540877140923" duration="356000" />
+      <workItem from="1540959988971" duration="3000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="359000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2026" y="371" width="1851" height="1040" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25346646" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32984293" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.34577388" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/runsim.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traj_opt_Park_swarm.m">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>

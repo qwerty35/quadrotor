@@ -21,18 +21,19 @@ if numel(t) == 0 | numel(qi) == 0
     
     map0 = map;
     path0 = path;
-    total_time0 = time_step * makespan;
+    total_time0 = time_step * (makespan + 2); % +2: start, end points
     
-    [map.box_cell, ts_cell, ts0, rel] = generate_swarm_box(map0,path0,makespan,time_step,0);
-
+    disp('Generate swarm box ...');
     tic
-    [Coef0,Npoly,total_cost] = traj_opt_Park_swarm(path0,map.box_cell,ts_cell, ts0, rel, 0.6); 
+    [map.box_cell, ts_cell, ts0, rel] = generate_swarm_box(map0,path0,total_time0,time_step,0);
     toc
+    
+    [Coef0,Npoly,total_cost] = traj_opt_Park_swarm(path0,map.box_cell,ts_cell, ts0, rel, 0.3); 
+
     
     disp(total_cost);
     
     % plot box, segment points 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%각 agent들의 path 다 보이게 할것
     segments = [Coef0{1}(Npoly+1:Npoly+1:end,:); path0{1}(end,:)];
     plot_path(map,path0,segments);
     return

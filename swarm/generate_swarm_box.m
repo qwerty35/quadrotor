@@ -1,4 +1,4 @@
-function [box_cell, ts_cell, ts_total, rel] = generate_swarm_box(map, path, makespan, time_step, margin)
+function [box_cell, ts_cell, ts_total, rel] = generate_swarm_box(map, path, total_time, time_step, margin)
 % This code is written by
 % Jungwon Park
 % Seoul National University
@@ -9,7 +9,7 @@ function [box_cell, ts_cell, ts_total, rel] = generate_swarm_box(map, path, make
 %
 % input: map            struct, 
 %        path           cell{ path_size x xyz }
-%        makespan       scalar, 
+%        total_time     scalar, 
 %        time_step      scalar, 
 %        margin         scalar, block collision margin
 %
@@ -96,7 +96,7 @@ for qi = 1:qn
         end
     end
     
-    ts_cell{qi} = [0 ts makespan] * time_step;
+    ts_cell{qi} = [0 ts*time_step total_time];
     box_cell{qi} = box;
     ts_total = [ts_total ts];
 end
@@ -105,25 +105,24 @@ end
 sector_range = [-3 -2 -1 1 2 3];
 
 for qi = 1:qn
-    for qj = qi+1:qn
+    for qj = qi+1:qn      
         [path_size,index] = sort([size(path{qi},1), size(path{qj},1)]);
         path_max = path_size(2);
         path_min = path_size(1);      
-                
         sector_log = zeros(6,path_max);
         
         for iter = 1 : path_max
             % get rel_pose
             if iter <= path_min
                 rel_pose = path{qj}(iter,:)-path{qi}(iter,:);
-            elseif index(1) == 1 % qi short
+            elseif index(1) == 1
                 rel_pose = path{qj}(iter,:)-path{qi}(end,:);
-            else % qj short
+            else
                 rel_pose = path{qj}(end,:)-path{qi}(iter,:);
             end
             
             % log sector information
-            for i = 1:6
+            for i = 1:size(sector_range,2)
                 sector = sector_range(i);
                 if rel_pose(abs(sector))*sign(sector) > 0
                     if iter == 1
@@ -138,27 +137,39 @@ for qi = 1:qn
         % find minimum jump sector path (heuristic greedy search)
         iter = path_max;
         [c_next,s_next] = max(sector_log(:,iter));
-        rel = [[qi qj sector_range(s_next) makespan*time_step]; rel];
-        iter = iter - c_next;
+        rel = [[qi qj sector_range(s_next) total_time]; rel];
+        iter = iter - c_next + 1;
         
         while iter > 1
             [c_curr,s_curr] = max(sector_log(:,iter));
             
-            if c_curr == 0
-                error("invalid path");
+            % if there is no intersection then allow to jump sector  
+            % except jumping through quadrotor (e.g. +x -> -x jumping is not allowed)
+            if c_curr <= 1
+                iter = iter - 1;
+                
+                s_opp = size(sector_range,2) + 1 - s_next;
+                [c_curr,s_curr] = max(sector_log(:,iter));
+                                
+                if c_curr <= 0
+                    error("Invalid Path, missing link");
+                elseif s_curr == s_opp
+                    error("TODO: Debug duplicated max value...");
+                end
+                count = 2;
+            else
+                count = 1;
+                while  sector_log(s_curr,iter+count) > 0
+                    count = count + 1;
+                end
             end
             
-            count = 1;
-            while  sector_log(s_curr,iter+count) > 0
-                count = count + 1;
-            end
-            
-            rel = [[qi qj sector_range(s_curr) floor(iter+count/2)*time_step]; rel];
-            ts_total = [ts_total floor(iter+count/2)];
+            rel = [[qi qj sector_range(s_curr) floor(iter-1+count/2)*time_step]; rel];
+            ts_total = [ts_total floor(iter-1+count/2)];
             
             s_next = s_curr;
             c_next = c_curr;
-            iter = iter - c_next;
+            iter = iter - c_next + 1;
         end
         
     end
@@ -166,7 +177,7 @@ end
 
 % generate total time segment
 ts_total = unique(ts_total); % remove duplicated elements and sort
-ts_total = [0 ts_total makespan] * time_step;
+ts_total = [0 ts_total*time_step total_time];
 
 end
 

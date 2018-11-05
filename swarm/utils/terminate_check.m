@@ -17,7 +17,7 @@ end
 % Check total simulation time
 time_check = time > time_tol;
 % Check collision criteria
-col_check = collision_inter_check(pos_col_check, map, 0.3);
+col_check = collision_inter_check(pos_col_check, map, 0.2);
 
 if (pos_check && vel_check)
     terminate_cond = 1; % Robot reaches goal and stops, successful

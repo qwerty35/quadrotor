@@ -20,6 +20,8 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
 %         N                         scalar, order of trajectory planning
 %         total_cost                scalar,
 
+    disp('Building Constraints matrices ...');
+    tic
     %% Initialization    
     N = 5;             % order of trajectory planning
     M = size(ts_total,2)-1;   % number of total segments 
@@ -39,7 +41,7 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
     % Coef(2) = 1;     % minimum accelation trajectory
 
     gao_rescale = 0;   % multipling scale factor on traj
-    dw = 3;            % downwash effect coefficient
+    dw = 1;            % downwash effect coefficient
                        
     %% Build cost function Q
     % Q : qn(N+1)M x qn(N+1)M
@@ -214,31 +216,36 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
             d_upper = zeros((N+1)*M, outdim);
             d_lower = zeros((N+1)*M, outdim);
             
+            % find box number
             for k = 1 : outdim
-                ri = 1;
                 for m = 1 : M
                     for n = 1 : N+1
                         % find box number
-                        while rel(ri,4) < ts_total(m+1) %%?
+                        ri = 1;
+                        while rel(ri,1) ~= qi || rel(ri,2) ~= qj || rel(ri,4) < ts_total(m+1)
                             ri = ri + 1;
                         end
                         
                         sector = rel(ri,3);
                         
-                        d_upper((N+1)*(m-1)+n, k) = 99999999;
-                        d_lower((N+1)*(m-1)+n, k) = 99999999;
+                        d_upper((N+1)*(m-1)+n, k) = 10000000;
+                        d_lower((N+1)*(m-1)+n, k) = 10000000;
                         if abs(sector) == k
-                            if sector < 0 && k ~= 3
-                                d_upper((N+1)*(m-1)+n, k) = -margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
-                            elseif sector < 0 && k == 3
-                                d_upper((N+1)*(m-1)+n, k) = -dw*margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
-                            elseif sector > 0 && k ~= 3
-                                d_lower((N+1)*(m-1)+n, k) = -margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
-                            elseif sector > 0 && k == 3
-                                d_lower((N+1)*(m-1)+n, k) = -dw*margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
+%                             if sector < 0 && k ~= 3
+%                                 d_upper((N+1)*(m-1)+n, k) = -margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
+%                             elseif sector < 0 && k == 3
+% %                                 d_upper((N+1)*(m-1)+n, k) = -dw*margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
+%                             elseif sector > 0 && k ~= 3
+%                                 d_lower((N+1)*(m-1)+n, k) = -margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
+%                             elseif sector > 0 && k == 3
+% %                                 d_lower((N+1)*(m-1)+n, k) = -dw*margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
+%                             end
+                            if sector < 0
+                                d_upper((N+1)*(m-1)+n, k) = -2*margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
+                            elseif sector > 0
+                                d_lower((N+1)*(m-1)+n, k) = -2*margin/((ts_total(m+1)-ts_total(m))^gao_rescale);
                             end
                         end
-                        
                     end
                 end
             end
@@ -250,8 +257,14 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
     
     dlq = [dlq_box; dlq_rel];
     
+    
+    save const_matrix
+    
+    toc
     %% Solve QP and get c
     % c: M*(N+1) x 1
+    disp('Solve QP and get coefficients ...');
+    tic
     c = zeros(qn*M*(N+1), outdim);
     total_cost = 0;
     
@@ -267,8 +280,9 @@ function [p, N, total_cost] = traj_opt_Park_swarm(path, box_cell, ts_cell, ts_to
 %             error('quadprog error')
 %         end
         total_cost = total_cost + cost;
-    end
-
+    end   
+    toc
+    
     %% translate c to p
     p = cell(qn,1);
     for qi = 1:qn

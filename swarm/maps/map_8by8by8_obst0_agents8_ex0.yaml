@@ -1,0 +1,29 @@
+agents:
+-   goal: [6, 6, 6]
+    name: agent0
+    start: [1, 1, 1]
+-   goal: [1, 1, 1]
+    name: agent1
+    start: [6, 6, 6]
+-   goal: [6, 6, 1]
+    name: agent2
+    start: [1, 1, 6]
+-   goal: [1, 1, 6]
+    name: agent3
+    start: [6, 6, 1]
+-   goal: [6, 1, 6]
+    name: agent4
+    start: [1, 6, 1]
+-   goal: [1, 6, 1]
+    name: agent5
+    start: [6, 1, 6]
+-   goal: [1, 6, 6]
+    name: agent6
+    start: [6, 1, 1]
+-   goal: [6, 1, 1]
+    name: agent7
+    start: [1, 6, 6]
+map:
+    dimensions: [8, 8, 8]
+    obstacles:
+    - !!python/tuple [5, 3, 3]
